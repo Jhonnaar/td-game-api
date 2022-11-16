@@ -23,6 +23,10 @@ y_pred = NB_model.predict(x_test)
 #Check performance of model
 score = precision_score(y_test, y_pred, average='micro')
 
+@app.route('/')
+def home():
+    return "Está funcionando"
+
 @app.route('/positions')
 def getPositions():
     import random
